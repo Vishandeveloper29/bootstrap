@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Progress Bars - Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="page-header text-center">
+            <h2>Bootstrap Progress Bars</h2>
+        </div>
+
+        <h3>1. Basic Progress Bars</h3>
+        <p>25%</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width:25%">25%</div>
+        </div>
+        <p>50%</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width:50%">50%</div>
+        </div>
+        <p>75%</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width:75%">75%</div>
+        </div>
+        <p>100%</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width:100%">100%</div>
+        </div>
+
+        <h3>2. Multi-Color Progress Bars</h3>
+        <p>Success</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">70% Complete</div>
+        </div>
+        <p>Information</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info" role="progressbar" style="width:55%">55% Complete</div>
+        </div>
+        <p>Warning</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:40%">40% Complete</div>
+        </div>
+        <p>Danger</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">20% Complete</div>
+        </div>
+
+        <h3>3. Striped Progress Bars</h3>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-success" role="progressbar" style="width:60%">60%
+            </div>
+        </div>
+
+        <h3>4. Animated Progress Bars</h3>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-info active" role="progressbar"
+                style="width:65%">65%</div>
+        </div>
+
+        <h3>5. Skill-wise Progress Bars</h3>
+        <p>HTML - 90%</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width:90%">90%</div>
+        </div>
+        <p>CSS - 80%</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info" style="width:80%">80%</div>
+        </div>
+        <p>Bootstrap - 75%</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning" style="width:75%">75%</div>
+        </div>
+        <p>JavaScript - 65%</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-danger" style="width:65%">65%</div>
+        </div>
+
+        <h3>6. Dynamically Change Progress Bar (JavaScript)</h3>
+        <div class="progress">
+            <div id="dynamicBar" class="progress-bar progress-bar-striped active" role="progressbar" style="width:30%">
+                30%</div>
+        </div>
+        <div class="form-inline" style="margin-bottom:40px;">
+            <div class="form-group">
+                <label>New value:</label>
+                <input type="number" id="newValue" class="form-control" min="0" max="100" value="30"
+                    style="width:100px; margin:0 10px;">
+            </div>
+            <button class="btn btn-primary" onclick="updateProgress()">Update Progress</button>
+            <button class="btn btn-default" onclick="resetProgress()">Reset</button>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function updateProgress() {
+            var val = document.getElementById('newValue').value;
+            val = Math.max(0, Math.min(100, parseInt(val) || 0));
+            var bar = document.getElementById('dynamicBar');
+            bar.style.width = val + '%';
+            bar.innerHTML = val + '%';
+        }
+        function resetProgress() {
+            document.getElementById('newValue').value = 30;
+            updateProgress();
+        }
+    </script>
+</body>
+
+</html>

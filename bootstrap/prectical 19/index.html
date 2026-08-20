@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Record Management - Bootstrap Modals</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="page-header text-center">
+            <h2>Student Record Management</h2>
+        </div>
+
+        <div id="statusMessage"></div>
+
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#saveModal">
+            <span class="glyphicon glyphicon-floppy-disk"></span> Save Record
+        </button>
+
+        <table class="table table-bordered table-striped" style="margin-top:20px;">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Vishan Rabari</td>
+                    <td>Computer Engineering</td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#deleteModal" data-record="Vishan Rabari">
+                            <span class="glyphicon glyphicon-trash"></span> Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Priya Shah</td>
+                    <td>Information Technology</td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#deleteModal" data-record="Priya Shah">
+                            <span class="glyphicon glyphicon-trash"></span> Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Arjun Mehta</td>
+                    <td>Electronics</td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#deleteModal" data-record="Arjun Mehta">
+                            <span class="glyphicon glyphicon-trash"></span> Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Save Confirmation Modal -->
+        <div class="modal fade" id="saveModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Save Record Confirmation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to save this record?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success" id="confirmSaveBtn" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-ok"></span> Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-danger"><span class="glyphicon glyphicon-warning-sign"></span>
+                            Delete Record Confirmation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete the record for <strong id="deleteRecordName"></strong>? This
+                            action cannot be undone.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-danger" id="confirmDeleteBtn" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-trash"></span> Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var recordName = '';
+
+            $('#deleteModal').on('show.bs.modal', function (e) {
+                recordName = $(e.relatedTarget).data('record');
+                $('#deleteRecordName').text(recordName);
+            });
+
+            $('#confirmSaveBtn').on('click', function () {
+                $('#statusMessage').html('<div class="alert alert-success">Record saved successfully.</div>');
+            });
+
+            $('#confirmDeleteBtn').on('click', function () {
+                $('#statusMessage').html('<div class="alert alert-danger">Record for ' + recordName + ' deleted successfully.</div>');
+            });
+        });
+    </script>
+</body>
+
+</html>

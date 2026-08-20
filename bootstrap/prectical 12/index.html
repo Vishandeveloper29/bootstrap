@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course Unit Summary - Nav Tabs/Pills</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="page-header text-center">
+            <h2>Responsive Web Programming Design (RWPD)</h2>
+            <p>This course covers building responsive websites using HTML, CSS and the Bootstrap framework, from basic
+                grid concepts to advanced components and plugins.</p>
+        </div>
+
+        <!-- Nav Tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#unit1" role="tab" data-toggle="tab">Unit 1</a></li>
+            <li role="presentation"><a href="#unit2" role="tab" data-toggle="tab">Unit 2</a></li>
+            <li role="presentation"><a href="#unit3" role="tab" data-toggle="tab">Unit 3</a></li>
+            <li role="presentation"><a href="#unit4" role="tab" data-toggle="tab">Unit 4</a></li>
+            <li role="presentation"><a href="#unit5" role="tab" data-toggle="tab">Unit 5</a></li>
+        </ul>
+
+        <div class="tab-content well">
+            <div role="tabpanel" class="tab-pane active" id="unit1">
+                <h3>Unit 1: Introduction to Bootstrap</h3>
+                <p><strong>Topics:</strong> Bootstrap setup, grid system, containers, typography.</p>
+                <ul>
+                    <li>Installing Bootstrap and linking files</li>
+                    <li>Container vs container-fluid</li>
+                    <li>Rows and columns</li>
+                </ul>
+                <p>Summary: Covers the fundamentals needed to start building responsive pages with Bootstrap.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="unit2">
+                <h3>Unit 2: Grid System</h3>
+                <p><strong>Topics:</strong> Offset columns, column ordering, nesting columns.</p>
+                <ul>
+                    <li>12-column responsive grid</li>
+                    <li>Nesting grids inside columns</li>
+                    <li>Reordering columns for different screen sizes</li>
+                </ul>
+                <p>Summary: Deep dive into building complex, responsive page layouts.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="unit3">
+                <h3>Unit 3: Forms and Buttons</h3>
+                <p><strong>Topics:</strong> Form layouts, form controls, input groups, buttons.</p>
+                <ul>
+                    <li>Horizontal, inline and basic forms</li>
+                    <li>Validation states</li>
+                    <li>Button styles and groups</li>
+                </ul>
+                <p>Summary: Explains how to design accessible and responsive forms.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="unit4">
+                <h3>Unit 4: Navigation Components</h3>
+                <p><strong>Topics:</strong> Navbars, tabs, pills, breadcrumbs, pagination.</p>
+                <ul>
+                    <li>Fixed top/bottom navbars</li>
+                    <li>Dropdowns inside navigation</li>
+                    <li>Tabs vs pills navigation</li>
+                </ul>
+                <p>Summary: Focuses on components used to help users move around a website.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="unit5">
+                <h3>Unit 5: JavaScript Plugins</h3>
+                <p><strong>Topics:</strong> Modals, alerts, tooltips, popovers, scrollspy, collapse.</p>
+                <ul>
+                    <li>Using Bootstrap's built-in JS plugins</li>
+                    <li>Triggering components via data attributes</li>
+                    <li>Dynamic behaviour with jQuery</li>
+                </ul>
+                <p>Summary: Introduces the interactive plugins that ship with Bootstrap.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h3 class="text-center">Same Units - Using Pills</h3>
+        <ul class="nav nav-pills nav-justified" role="tablist">
+            <li role="presentation" class="active"><a href="#p1" role="tab" data-toggle="tab">Unit 1</a></li>
+            <li role="presentation"><a href="#p2" role="tab" data-toggle="tab">Unit 2</a></li>
+            <li role="presentation"><a href="#p3" role="tab" data-toggle="tab">Unit 3</a></li>
+            <li role="presentation"><a href="#p4" role="tab" data-toggle="tab">Unit 4</a></li>
+            <li role="presentation"><a href="#p5" role="tab" data-toggle="tab">Unit 5</a></li>
+        </ul>
+        <div class="tab-content well">
+            <div role="tabpanel" class="tab-pane active" id="p1">
+                <p>Unit 1 summary: Bootstrap basics, setup and grid introduction.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="p2">
+                <p>Unit 2 summary: Advanced grid - offsets, ordering, nesting.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="p3">
+                <p>Unit 3 summary: Forms, controls, input groups and buttons.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="p4">
+                <p>Unit 4 summary: Navbars, tabs, pills, breadcrumbs, pagination.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="p5">
+                <p>Unit 5 summary: JavaScript plugins - modal, alert, tooltip, popover, scrollspy.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

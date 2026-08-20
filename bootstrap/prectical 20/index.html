@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News Story - Scrollspy, Tooltip, Collapse, Popover</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body data-spy="scroll" data-target="#newsNav" data-offset="70">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="newsNav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navMenu">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#intro">Daily Herald</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="nav navbar-nav">
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#mainstory">Main Story</a></li>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#keyevents">Key Events</a></li>
+                    <li><a href="#opinions">Opinions</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top:70px;">
+
+        <div class="page-header text-center">
+            <h1>City Announces New Smart Transit System</h1>
+            <p class="text-muted">Reported by Daily Herald Staff</p>
+        </div>
+
+        <section id="intro" style="padding-top:60px;">
+            <h2>Introduction</h2>
+            <p>The city administration has unveiled a new smart public transit initiative aimed at reducing congestion
+                and improving daily commutes for residents.</p>
+            <img src="https://via.placeholder.com/700x300?text=City+Transit+Launch" class="img-responsive"
+                alt="Transit launch" data-toggle="tooltip" data-placement="top"
+                title="City Hall, 18 Aug 2026 - Official launch event">
+        </section>
+
+        <section id="mainstory" style="padding-top:60px;">
+            <h2>Main Story</h2>
+            <p>The Smart Transit System includes real-time bus tracking, electronic ticketing, and dedicated bus lanes
+                across major routes. Officials say the system will roll out in three phases over the next 18 months.</p>
+            <img src="https://via.placeholder.com/700x300?text=New+Bus+Fleet" class="img-responsive" alt="Bus fleet"
+                data-toggle="tooltip" data-placement="top" title="New electric bus fleet unveiled at the depot">
+            <p>
+                <a href="#" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Project Budget"
+                    data-content="The transit project is funded with a budget of 120 crore rupees over three phases.">
+                    View Project Budget
+                </a>
+            </p>
+        </section>
+
+        <section id="background" style="padding-top:60px;">
+            <h2>Background</h2>
+            <p>
+                <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#bgDetails">
+                    Read More Background
+                </button>
+            </p>
+            <div class="collapse" id="bgDetails">
+                <div class="well">
+                    Planning for the transit overhaul began three years ago after a city-wide traffic survey revealed
+                    average commute times had increased by 35% over the past decade. The project was approved by the
+                    city council last year.
+                </div>
+            </div>
+        </section>
+
+        <section id="keyevents" style="padding-top:60px;">
+            <h2>Key Events</h2>
+            <ul>
+                <li>2023 - Traffic survey commissioned</li>
+                <li>2024 - Council approves transit budget</li>
+                <li>2025 - Contracts awarded to vendors</li>
+                <li>2026 - Phase 1 launch (current)</li>
+            </ul>
+            <img src="https://via.placeholder.com/700x300?text=Timeline+Event" class="img-responsive"
+                alt="Timeline event" data-toggle="tooltip" data-placement="top"
+                title="City Council Meeting, March 2024">
+        </section>
+
+        <section id="opinions" style="padding-top:60px;">
+            <h2>Public / Expert Opinions</h2>
+            <p>
+                <a href="#" tabindex="0" role="button" data-toggle="popover" data-trigger="focus"
+                    title="Transport Expert"
+                    data-content="Dr. N. Iyer: The phased rollout is a sensible approach that minimizes disruption to existing commuters.">
+                    Expert Opinion
+                </a>
+                &nbsp;
+                <a href="#" tabindex="0" role="button" data-toggle="popover" data-trigger="focus"
+                    title="Resident Feedback"
+                    data-content="Local resident Anjali Desai: We're hopeful this reduces our daily commute time significantly.">
+                    Resident Feedback
+                </a>
+            </p>
+        </section>
+
+        <section id="conclusion" style="padding-top:60px; padding-bottom:80px;">
+            <h2>Conclusion</h2>
+            <p>The Smart Transit System marks a major step toward modernizing the city's public transport
+                infrastructure, with residents hopeful it will ease daily congestion once fully operational.</p>
+        </section>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service Providers - Bootstrap Panels &amp; Alerts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="page-header text-center">
+            <h2>Service Provider Information</h2>
+        </div>
+
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Success!</strong> New offers are live for all broadband plans this month.
+        </div>
+        <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Info:</strong> Customer support is available 24x7 for all listed providers.
+        </div>
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Warning!</strong> Some services may be temporarily unavailable due to maintenance.
+        </div>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Error!</strong> Payment gateway is down for one provider. Please try again later.
+        </div>
+
+        <div id="closedMessage" class="alert alert-default" style="display:none; background-color:#eee;">
+            The alert has been closed successfully.
+        </div>
+
+        <hr>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-signal"></span> AirNet Broadband</h3>
+                    </div>
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/100x60?text=AirNet" alt="AirNet Logo"
+                            class="img-thumbnail" style="float:left; margin-right:15px;">
+                        <p>High-speed fiber internet service provider offering plans for home and business.</p>
+                        <p><strong>Website:</strong> www.airnet.example.com</p>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Fiber Broadband <span class="badge">Available</span></li>
+                        <li class="list-group-item">Business Leased Line</li>
+                        <li class="list-group-item">24x7 Customer Support</li>
+                        <li class="list-group-item">Plans starting &#8377;499/month</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-phone"></span> MobiTel Mobile Network
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/100x60?text=MobiTel" alt="MobiTel Logo"
+                            class="img-thumbnail" style="float:left; margin-right:15px;">
+                        <p>Mobile network operator offering prepaid and postpaid plans nationwide.</p>
+                        <p><strong>Website:</strong> www.mobitel.example.com</p>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Prepaid Plans <span class="badge">12</span></li>
+                        <li class="list-group-item">Postpaid Plans <span class="badge">5</span></li>
+                        <li class="list-group-item">Unlimited 5G Data</li>
+                        <li class="list-group-item">International Roaming</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-briefcase"></span> TrustBank</h3>
+                    </div>
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/100x60?text=TrustBank" alt="Bank Logo"
+                            class="img-thumbnail" style="float:left; margin-right:15px;">
+                        <p>Full-service bank offering savings accounts, loans and digital banking.</p>
+                        <p><strong>Website:</strong> www.trustbank.example.com</p>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Savings Account</li>
+                        <li class="list-group-item">Education Loans</li>
+                        <li class="list-group-item">Net Banking &amp; Mobile App</li>
+                        <li class="list-group-item">Branch Locator</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-send"></span> QuickShip Courier</h3>
+                    </div>
+                    <div class="panel-body">
+                        <img src="https://via.placeholder.com/100x60?text=QuickShip" alt="Courier Logo"
+                            class="img-thumbnail" style="float:left; margin-right:15px;">
+                        <p>Reliable courier and parcel delivery service across the country.</p>
+                        <p><strong>Website:</strong> www.quickship.example.com</p>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Same-day Delivery <span class="badge">City</span></li>
+                        <li class="list-group-item">Nationwide Shipping</li>
+                        <li class="list-group-item">Package Tracking</li>
+                        <li class="list-group-item">Cash on Delivery</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.alert').on('closed.bs.alert', function () {
+                $('#closedMessage').fadeIn();
+            });
+        });
+    </script>
+</body>
+
+</html>

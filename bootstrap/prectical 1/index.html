@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Practical1</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">GP Bhuj</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Abaut</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contect</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <h1 class="text-center" id="mainhead" title="wellcome heading">Wellcome to my webpage</h1>
+        <p class="lead text-center">This is a simpel practicel page maded using html and bootstrap frameowrk.</p>
+
+        <div class="alert alert-info text-center" role="alert">
+            This webpage is craeted for practical number 1.
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="colage image">
+                    <div class="card-body">
+                        <h5 class="card-title">Colage</h5>
+                        <p class="card-text">Government Polytechnic Bhuj is a well known colage for deploma studants.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="departmant image">
+                    <div class="card-body">
+                        <h5 class="card-title">Departmant</h5>
+                        <p class="card-text">Computer departmant provide good practicel knowledge to studants.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="studant image">
+                    <div class="card-body">
+                        <h5 class="card-title">Studant Life</h5>
+                        <p class="card-text">Studant life in colage is full of learning and new experiance.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-4">My Favrit Subjects</h2>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">Web Devlopment</li>
+            <li class="list-group-item">Java Programing</li>
+            <li class="list-group-item">Databse Managment</li>
+            <li class="list-group-item">Networkng</li>
+        </ul>
+
+        <h2>Timetabel</h2>
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Day</th>
+                    <th>Subjet</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Web Devlopment</td>
+                    <td>10:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Java</td>
+                    <td>11:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>DBMS</td>
+                    <td>12:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="contact">Contect Form</h2>
+        <form class="mb-5">
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Your Naam</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Enter your naam" required>
+            </div>
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">Email adress</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="messageInput" class="form-label">Mesage</label>
+                <textarea class="form-control" id="messageInput" rows="3" placeholder="Write your mesage"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Submmit</button>
+        </form>
+
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>Maded by Vishan Rabari | Batch 2026-2027</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

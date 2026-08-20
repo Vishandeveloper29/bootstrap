@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Menus</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container" style="margin-top:40px; margin-bottom:40px;">
+        <h2 class="text-center">Bootstrap Menu Components</h2>
+        <div class="row" style="margin-top:30px;">
+            <div class="col-md-3">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Basic Menu <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
+                        Right Aligned <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dropup">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">
+                        Drop Up <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Messages</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-phone"></span> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dropdown">
+                    <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
+                        With Headers <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">Account</li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Messages</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Settings</li>
+                        <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Preferences</a></li>
+                        <li class="disabled"><a href="#"><span class="glyphicon glyphicon-lock"></span> Privacy</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

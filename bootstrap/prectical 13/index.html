@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navbar and Footer - Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- Fixed Top Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-education"></span> RWPD College
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Computer Engineering</a></li>
+                            <li><a href="#">Information Technology</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">All Courses</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><span
+                                    class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" class="btn btn-success navbar-btn" style="margin-top:8px; margin-left:10px;">Sign
+                            Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container" style="margin-top:80px; margin-bottom:80px;">
+        <div class="page-header">
+            <h2>Welcome to RWPD College</h2>
+        </div>
+        <p>Scroll down this page to see the navbar stay fixed to the top and the footer stay fixed to the bottom of the
+            browser window.</p>
+        <p>Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec
+            velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+        <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a
+            pellentesque nec, egestas non nisi.</p>
+        <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta
+            dapibus.</p>
+        <p>Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at
+            sem.</p>
+        <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
+        <p>Repeat scrolling: Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac
+            lectus.</p>
+        <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis
+            porttitor volutpat.</p>
+        <p>End of page content. The footer below remains fixed to the bottom of the viewport.</p>
+    </div>
+
+    <!-- Fixed Bottom Footer -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+            <p class="navbar-text">&copy; 2026 RWPD College. All Rights Reserved.</p>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> info@rwpdcollege.edu</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-globe"></span> www.rwpdcollege.edu</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-facebook"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
